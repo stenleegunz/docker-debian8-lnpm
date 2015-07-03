@@ -16,7 +16,10 @@ ADD ./bin /tmp/bin
 RUN chmod 755 /tmp/bin/*.sh && \
 	echo 'root:zxcvbnm' | chpasswd && \
 	/tmp/bin/init_ssh.sh && \
-	/tmp/bin/init_mysql.sh
+	/tmp/bin/init_mysql.sh && \
+	/tmp/bin/init_nginx.sh && \
+	/tmp/bin/init_php.sh && \
+	/tmp/bin/install_composer.sh
 
 ADD ./supervisor /etc/supervisor
 
