@@ -5,7 +5,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 # install and update base packages
 RUN apt-get -y update && apt-get -y upgrade && \
-    apt-get -y install git wget tar bzip2 curl supervisor openssh-server memcached && \
+    apt-get -y install git wget tar bzip2 curl supervisor openssh-server memcached vim && \
     apt-get -y install mariadb-server mariadb-client && \
     apt-get -y install nginx && \
     apt-get -y install php5-fpm php5-mysql php5-curl php5-gd php5-intl php-pear php5-imap php5-memcache && \
